@@ -6,6 +6,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
+import { NewPostComponent } from './components/new-post/new-post.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'posts/:id/edit',
     component: PostEditComponent
+  },
+  {
+    path: 'new-post',
+    component: NewPostComponent
   }
 
 ]
