@@ -1,0 +1,12 @@
+<form #form="ngForm" (ngSubmit)="update(form)">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="p!.title" [ngModelOptions]="{standalone: true}" required ngModel>
+    </div>
+    <div class="mb-3">
+        <label for="body" class="form-label">Body</label>
+        <textarea type="text" class="form-control" id="body" [(ngModel)]="p!.body" [ngModelOptions]="{standalone: true}" required ngModel></textarea>
+      </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
