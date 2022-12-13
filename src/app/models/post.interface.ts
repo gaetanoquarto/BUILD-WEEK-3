@@ -4,5 +4,6 @@ export interface Post {
     title: string,
     body: string,
     category: string,
-    date: string
+    date: string,
+    subtitle: string
 }

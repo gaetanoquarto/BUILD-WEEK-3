@@ -28,7 +28,8 @@ export class NewPostComponent implements OnInit {
     title: '',
     body: '',
     category: '',
-    date: this.fullDate
+    date: this.fullDate,
+    subtitle: ''
   }
 
     create(form: NgForm) {
