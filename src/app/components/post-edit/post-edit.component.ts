@@ -38,7 +38,8 @@ export class PostEditComponent implements OnInit {
         title: this.p!.title,
         body: this.p!.body,
         date: this.p!.date,
-        author: this.p!.author
+        author: this.p!.author,
+        category: this.p!.category
       }
       console.log(post)
       this.pstSrv.updatePost(post).subscribe((data) => {

@@ -12,6 +12,7 @@ export class PostsComponent implements OnInit {
 
   constructor(private pstSrv: PostsService) { }
 
+  page = 1;
   sub: Subscription | undefined
   posts: Post[] | undefined
 

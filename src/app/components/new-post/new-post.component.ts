@@ -27,6 +27,7 @@ export class NewPostComponent implements OnInit {
   newPost = {
     title: '',
     body: '',
+    category: '',
     date: this.fullDate
   }
 

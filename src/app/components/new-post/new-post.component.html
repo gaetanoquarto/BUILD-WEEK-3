@@ -31,6 +31,24 @@
                 ></textarea>
               </div>
               <div class="form-group">
+                <label for="title">Category</label>
+                <select
+                  id="category"
+                  [ngModel]="newPost.category"
+                  name="category"
+                  class="form-select"
+                  required
+                  #category="ngModel"
+                >
+                  <option value="" selected></option>
+                  <option value="Pc">Pc</option>
+                  <option value="Playstation">Playstation</option>
+                  <option value="Xbox">Xbox</option>
+                  <option value="Nintendo">Nintendo</option>
+                  <option value="Coding">Coding</option>
+                </select>
+              </div>
+              <div class="form-group">
                 <label for="date">Date</label>
                 <input
                   type="text"
@@ -38,7 +56,8 @@
                   [ngModel]="newPost.date"
                   name="date"
                   class="form-control"
-                  #date="ngModel" readonly
+                  #date="ngModel"
+                  readonly
                 />
               </div>
               <button

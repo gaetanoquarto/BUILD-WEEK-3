@@ -3,5 +3,6 @@ export interface Post {
     author: string,
     title: string,
     body: string,
+    category: string,
     date: string
 }
