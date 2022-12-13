@@ -16,6 +16,14 @@ import { NewPostComponent } from './components/new-post/new-post.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PlaystationComponent } from './components/categories/playstation/playstation.component';
+import { PcComponent } from './components/categories/pc/pc.component';
+import { XboxComponent } from './components/categories/xbox/xbox.component';
+import { NintendoComponent } from './components/categories/nintendo/nintendo.component';
+import { FilteredPlaystationComponent } from './components/filtered/filtered-playstation/filtered-playstation.component';
+import { FilteredXboxComponent } from './components/filtered/filtered-xbox/filtered-xbox.component';
+import { FilteredPcComponent } from './components/filtered/filtered-pc/filtered-pc.component';
+import { FilteredNintendoComponent } from './components/filtered/filtered-nintendo/filtered-nintendo.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +37,14 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     RegisterComponent,
     FooterComponent,
+    PlaystationComponent,
+    PcComponent,
+    XboxComponent,
+    NintendoComponent,
+    FilteredPlaystationComponent,
+    FilteredXboxComponent,
+    FilteredPcComponent,
+    FilteredNintendoComponent,
   ],
   imports: [
     BrowserModule,
