@@ -1,30 +1,36 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/posts']" routerLinkActive="active">Posts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/category/playstation']" routerLinkActive="active">Playstation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/category/xbox']" routerLinkActive="active">Xbox</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/category/nintendo']" routerLinkActive="active">Nintendo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/category/pc']" routerLinkActive="active">Pc</a>
-          </li>
-        </ul>
+<div class="sticky-top nav-container" nav="nav1">
+  <div class="container-fluid bg-nav text-center pt-3"><a [routerLink]="['/']">
+      <img id="logo"
+          src="https://i.imgur.com/owQG1ZI.png"></a>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-nav pt-2">
+      <div class="container-fluid">
+          <a class="navbar-brand" [routerLink]="['/']"><img id="logo2"
+              src="https://i.imgur.com/owQG1ZI.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+              <ul class="navbar-nav">
+                 <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/posts']" routerLinkActive="active">Posts</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/category/playstation']"
+                          routerLinkActive="active">Playstation</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/category/xbox']" routerLinkActive="active">Xbox</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/category/nintendo']" routerLinkActive="active">Nintendo</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/category/pc']" routerLinkActive="active">Pc</a>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </div>
   </nav>
+</div>

@@ -1,0 +1,60 @@
+.bg-nav {
+    background-color: #F96E46;
+}
+
+.nav-container {
+ border-bottom: 3px solid white;
+}
+
+#logo {
+    width: 200px;
+}
+
+#logo2 {
+    width: 150px;
+}
+
+ul {
+    margin-bottom: -28px;
+}
+
+li {
+    margin: 0 5px;
+}
+
+ul li a {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: #F96E46;
+    border-radius: 20px;
+    border: 3px solid white;
+
+
+}
+
+ul li a:hover {
+    background-image: linear-gradient(to bottom, #f96e46, #fc7c58, #fe8a69, #ff987b, #ffa58c);
+   border-radius: 20px;
+
+}
+
+ul li a:focus {
+    background-color:#545863;
+   border-radius: 20px;
+   border: 3px solid white;
+ }
+
+
+@media screen and (max-width: 991px) {
+    #logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    #logo2 {
+        display: none;
+    };
+}

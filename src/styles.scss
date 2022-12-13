@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+h1 {
+    color: #545863;
+}
+
+input:active, input:focus, textarea:active, textarea:focus {
+    border: 1px solid #F96E46 !important;
+    box-shadow: 0px 0px 10px #F96E46 !important;
+}
+
+.back {
+    color: #545863;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: #F96E46;
+    }
+}
+
+.btn {
+    background-color: #F96E46;
+    border: 1px solid #F96E46;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: #e14920;
+        border: 1px solid #e14920;
+        transform: translateX(5px);
+    }
+}

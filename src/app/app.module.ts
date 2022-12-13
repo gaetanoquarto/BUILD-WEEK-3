@@ -13,8 +13,6 @@ import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NewPostComponent } from './components/new-post/new-post.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PlaystationComponent } from './components/categories/playstation/playstation.component';
 import { PcComponent } from './components/categories/pc/pc.component';
@@ -34,8 +32,6 @@ import { FilteredNintendoComponent } from './components/filtered/filtered-ninten
     PostEditComponent,
     PostDetailsComponent,
     NewPostComponent,
-    LoginComponent,
-    RegisterComponent,
     FooterComponent,
     PlaystationComponent,
     PcComponent,
@@ -51,7 +47,7 @@ import { FilteredNintendoComponent } from './components/filtered/filtered-ninten
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

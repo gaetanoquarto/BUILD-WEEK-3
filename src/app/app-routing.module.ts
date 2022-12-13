@@ -11,6 +11,10 @@ import { PlaystationComponent } from './components/categories/playstation/playst
 import { PcComponent } from './components/categories/pc/pc.component';
 import { XboxComponent } from './components/categories/xbox/xbox.component';
 import { NintendoComponent } from './components/categories/nintendo/nintendo.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthModule } from './auth/auth.module';
 
 const routes: Routes = [
   {
@@ -22,8 +26,17 @@ const routes: Routes = [
     component: PostsComponent
   },
   {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "register",
+    component: RegisterComponent
+  },
+  {
     path: 'posts/:id',
-    component: PostDetailsComponent
+    component: PostDetailsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'posts/:id/edit',

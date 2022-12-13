@@ -1,9 +1,9 @@
 <div class="container-fluid d-flex justify-content-center align-items-center container100">
     <div class="card login shadow text-center w-25 mt-5 p-5">
-    <div class="card-body text-white">
+    <div class="card-body">
       <h1 class="card-title mb-4 logo fw-bold">M</h1>
       <h5 class="card-title mb-4 ">Effettua il log-in</h5>
-      <form #form="ngForm" >
+      <form #form="ngForm" (ngSubmit)="accedi(form)">
     <div class="mb-3 form-floating form-group">
       <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com" required ngModel>
       <label for="email"><i class="bi bi-envelope"></i> Email</label>
@@ -17,6 +17,6 @@
   </form>
     </div>
     <hr class="border border-white">
-  <p class="text-white">Non sei registrato ? <a class="text-danger text-decoration-none" [routerLink]="['/register']">Registrati</a></p>
+  <p class="">Non sei registrato ? <a class="text-danger text-decoration-none" [routerLink]="['/register']">Registrati</a></p>
   </div>
   </div>

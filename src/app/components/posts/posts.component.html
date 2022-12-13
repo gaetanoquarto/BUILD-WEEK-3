@@ -1,25 +1,23 @@
 <div class="container-fluid">
   <a class="btn btn-primary my-4" [routerLink]="['/new-post']">Create new post</a>
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Title</th>
-        <th scope="col">Description</th>
-        <th scope="col">Date</th>
-        <th scope="col"></th>
+
+
+<div class="container-fluid d-flex flex-wrap justify-content-center p-5">
+  <div class="card m-3 bg-dark bg-gradient text-white" *ngFor="let post of posts! | paginate:{itemsPerPage: 10, currentPage: page}">
+    <img src="https://c1.wallpaperflare.com/preview/1021/862/549/newspaper-le-monde-background-old.jpg" class="card-img-top" alt="article-photo" style="width: 300px;">
+    <div class="card-body">
+      <h4 class="card-title">{{post.title}}</h4>
+      <p class="card-text">{{post.subtitle}}</p>
+      <div class="text-center">
+        <a class="btn btn-dark bg-gradient m-3" [routerLink]="['/posts/', post.id]"><i class="bi bi-menu-up"></i></a>
+        <a class="btn btn-dark bg-gradient m-3" [routerLink]="['/posts/' + post.id + '/edit/']"><i class="bi bi-pencil-square"></i></a>
+        <a type="button" class="btn btn-dark bg-gradient m-3" (click)="deletePost(post.id)"><i class="bi bi-trash3"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let post of posts! | paginate:{itemsPerPage: 10, currentPage: page}">
-        <td>{{post.title}}</td>
-        <td>{{post.body}}</td>
-        <td>{{post.date}}</td>
-        <td><a class="btn btn-success" [routerLink]="['/posts/', post.id]">dettagli</a> <a class="btn btn-primary" [routerLink]="['/posts/' + post.id + '/edit/']">Modifica</a> <a type="button" class="btn btn-danger" (click)="deletePost(post.id)">Elimina</a></td>
-      </tr>
-    </tbody>
-  </table>
-  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
 </div>
