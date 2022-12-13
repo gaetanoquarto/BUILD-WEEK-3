@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { User } from 'src/app/models/user.interface';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
 
 
   accedi(form: NgForm) {
-    this.authSrv.login().subscribe((ris) => {
+    this.authSrv.login(form.value).subscribe((ris) => {
       let users: any = ris;
       console.log(users);
       users.map((user: User) => {
@@ -34,6 +35,7 @@ export class LoginComponent implements OnInit {
             password: user.password
           }
           localStorage.setItem('user', JSON.stringify(newUser));
+
           this.router.navigate(['']);
         }
       });

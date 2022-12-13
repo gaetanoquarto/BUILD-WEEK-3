@@ -17,15 +17,12 @@ export class PostsComponent implements OnInit {
   posts: Post[] | undefined
 
   ngOnInit(): void {
-    this.getArticles();
-  }
-
-  getArticles() {
     this.sub = this.pstSrv.getPosts().subscribe((post) => {
       this.posts = post;
       console.log(post)
     })
   }
+
 
   deletePost(id: number) {
     this.sub = this.pstSrv.deletePost(id).subscribe(() => {

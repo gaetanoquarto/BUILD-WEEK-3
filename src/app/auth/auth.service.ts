@@ -27,7 +27,8 @@ export class AuthService {
     this.restore()
   }
 
-  login() {
+  login(user: {user: any, email: string, password: string}) {
+    this.authSubj.next(user)
     return this.http.get(`${this.url}/users`)
       }
 

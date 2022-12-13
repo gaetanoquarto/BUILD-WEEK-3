@@ -34,7 +34,8 @@ export class NewPostComponent implements OnInit {
 
     create(form: NgForm) {
       console.log(form.value)
-      this.pstSrv.createPost(form.value).subscribe()
-      this.router.navigate(['/posts']);
+      this.pstSrv.createPost(form.value).subscribe((res: any) => {
+        this.router.navigate(['/posts']);
+      })
     }
 }

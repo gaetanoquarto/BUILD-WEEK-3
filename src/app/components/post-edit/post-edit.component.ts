@@ -45,9 +45,9 @@ export class PostEditComponent implements OnInit {
       console.log(post)
       this.pstSrv.updatePost(post).subscribe((data) => {
         console.log(data);
+        this.router.navigate(['/posts']);
 
       })
-      this.router.navigate(['/posts']);
     }
   }
 

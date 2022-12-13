@@ -2,7 +2,7 @@ h1 {
     color: #545863;
 }
 
-input:active, input:focus, textarea:active, textarea:focus {
+input:active, input:focus, textarea:active, textarea:focus, select:active, select:focus {
     border: 1px solid #F96E46 !important;
     box-shadow: 0px 0px 10px #F96E46 !important;
 }
@@ -25,3 +25,8 @@ input:active, input:focus, textarea:active, textarea:focus {
         transform: translateX(5px);
     }
 }
+
+.ngx-pagination .current {
+    background: #F96E46 !important;
+}
+

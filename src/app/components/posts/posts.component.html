@@ -3,8 +3,8 @@
 
 
 <div class="container-fluid d-flex flex-wrap justify-content-center p-5">
-  <div class="card m-3 bg-dark bg-gradient text-white" *ngFor="let post of posts! | paginate:{itemsPerPage: 10, currentPage: page}">
-    <img src="https://c1.wallpaperflare.com/preview/1021/862/549/newspaper-le-monde-background-old.jpg" class="card-img-top" alt="article-photo" style="width: 300px;">
+  <div class="card m-3 bg-dark bg-gradient text-white w-25" *ngFor="let post of posts! | paginate:{itemsPerPage: 10, currentPage: page}">
+    <img src="https://images2.alphacoders.com/125/1258095.jpg" class="card-img-top" alt="article-photo" >
     <div class="card-body">
       <h4 class="card-title">{{post.title}}</h4>
       <p class="card-text">{{post.subtitle}}</p>
