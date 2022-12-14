@@ -35,6 +35,10 @@ export class PostsService {
     return this.http.get<Comment[]>(`https://6396f0fd77359127a027315e.mockapi.io/posts/${id}/comments`);
   }
 
+  updateComments(id: number, commentId: number, comment: Comment) {
+    return this.http.put<Post>(`https://6396f0fd77359127a027315e.mockapi.io/posts/${id}/comments/${commentId}`, comment);
+  }
+
   getCategoryPosts(category: string): Observable<Post[]> {
     return this.http.get<Post[]>(`https://6396f0fd77359127a027315e.mockapi.io/posts?category=${category}`);
   }

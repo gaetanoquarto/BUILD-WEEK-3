@@ -23,6 +23,7 @@ import { FilteredXboxComponent } from './components/filtered/filtered-xbox/filte
 import { FilteredPcComponent } from './components/filtered/filtered-pc/filtered-pc.component';
 import { FilteredNintendoComponent } from './components/filtered/filtered-nintendo/filtered-nintendo.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     FilteredPcComponent,
     FilteredNintendoComponent,
     CommentsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

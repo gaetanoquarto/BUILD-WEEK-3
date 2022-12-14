@@ -39,6 +39,7 @@ export class PostEditComponent implements OnInit {
         body: this.p!.body,
         date: this.p!.date,
         author: this.p!.author,
+        authorImage: this.p!.authorImage,
         category: this.p!.category,
         subtitle: this.p!.subtitle,
         image: this.p!.image,

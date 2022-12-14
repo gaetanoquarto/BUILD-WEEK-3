@@ -6,6 +6,8 @@ import { PostsService } from 'src/app/services/posts.service';
 import { Comment } from 'src/app/models/comment.interface';
 import { Subscription } from 'rxjs';
 import { Post } from 'src/app/models/post.interface';
+import { User } from 'src/app/models/user.interface';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-comments',
@@ -14,15 +16,16 @@ import { Post } from 'src/app/models/post.interface';
 })
 export class CommentsComponent implements OnInit {
 
-  constructor(private ar: ActivatedRoute, private pstSrv: PostsService, private router: Router) { }
+  constructor(private ar: ActivatedRoute, private pstSrv: PostsService, private router: Router, private usrSrv: UsersService) { }
 
   ngOnInit(): void {
-    this.getComments();
+    this.updateData();
   }
 
   sub: Subscription | undefined
   p: Post | undefined
   comments: Comment[] | undefined
+  users: User[] | undefined
 
 
   currentDate: Date = new Date();
@@ -36,6 +39,7 @@ export class CommentsComponent implements OnInit {
     date: this.fullDate,
     image: ''
   }
+
 
   post(form: NgForm) {
     //otteniamo i dati dello user loggato
@@ -60,16 +64,38 @@ export class CommentsComponent implements OnInit {
     })
   }
 
-  getComments() {
+  updateData() {
+    this.sub = this.usrSrv.getusers().subscribe((ris) => {
+      this.users = ris;
+      console.log(this.users)
+      let x = this.ar.snapshot.params["id"];
+      this.sub = this.pstSrv.getComments(x).subscribe((data) => {
+        console.log(data)
+        this.comments = data
+        this.users?.some((user) => {
+          this.comments?.some((comment) => { if (user.id === comment.userId && user.image !== comment.image) {
+            let newUserComment: Comment = {
+              id: comment.id,
+              postId: comment.postId,
+              userId: comment.userId,
+              name: comment.name,
+              comment: comment.comment,
+              date: comment.date,
+              image: user.image
+            }
+            console.log(newUserComment)
+            this.pstSrv.updateComments(newUserComment.postId, newUserComment.id, newUserComment).subscribe((ris) => {
+              console.log(ris);
+              location.reload();
+            })
+          }
+          });
+        });
 
-    let x = this.ar.snapshot.params["id"];
-    this.sub = this.pstSrv.getComments(x).subscribe((data) => {
-      console.log(data)
-      this.comments = data
+
+
+    })
     })
 
-  }
-
-
-
+}
 }

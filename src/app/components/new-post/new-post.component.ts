@@ -14,23 +14,29 @@ export class NewPostComponent implements OnInit {
 
   constructor(private ar: ActivatedRoute, private pstSrv: PostsService, private router: Router) { }
 
+userData: any = []
 
   ngOnInit(): void {
-
+   let userLogged: any = localStorage.getItem('user');
+    this.userData = JSON.parse(userLogged);
 
   }
 
   currentDate: Date = new Date();
  fullDate = `${this.currentDate.getDate()}-${(this.currentDate.getMonth() + 1)}-${this.currentDate.getFullYear()}`
 
+
+
   newPost = {
     title: '',
+    author: this.userData.name,
+    authorImage: this.userData.image,
     body: '',
     category: '',
     date: this.fullDate,
     subtitle: '',
     image: '',
-    cover: ''
+    cover: '',
   }
 
     create(form: NgForm) {
