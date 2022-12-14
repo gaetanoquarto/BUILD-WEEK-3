@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Post } from 'src/app/models/post.interface';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-xbox',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XboxComponent implements OnInit {
 
-  constructor() { }
+    constructor(private pstSrv: PostsService) { }
 
-  ngOnInit(): void {
+    page = 1;
+    sub: Subscription | undefined
+    posts: Post[] | undefined
+
+    ngOnInit(): void {
+      this.sub = this.pstSrv.getCategoryPosts('xbox').subscribe((post) => {
+        this.posts = post;
+      })
+    }
+
   }
-
-}

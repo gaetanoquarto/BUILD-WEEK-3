@@ -22,6 +22,7 @@ import { FilteredPlaystationComponent } from './components/filtered/filtered-pla
 import { FilteredXboxComponent } from './components/filtered/filtered-xbox/filtered-xbox.component';
 import { FilteredPcComponent } from './components/filtered/filtered-pc/filtered-pc.component';
 import { FilteredNintendoComponent } from './components/filtered/filtered-nintendo/filtered-nintendo.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FilteredNintendoComponent } from './components/filtered/filtered-ninten
     FilteredXboxComponent,
     FilteredPcComponent,
     FilteredNintendoComponent,
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,

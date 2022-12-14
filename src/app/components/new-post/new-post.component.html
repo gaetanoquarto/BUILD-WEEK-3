@@ -27,6 +27,14 @@
           </select>
       </div>
       <div class="form-group my-3">
+        <label for="image" class="form-label">Image link</label>
+        <input type="text" class="form-control" id="image" [ngModel]="newPost.image" name="image" required #image="ngModel" />
+    </div>
+    <div class="form-group my-3">
+        <label for="cover" class="form-label">Cover link</label>
+        <input type="text" class="form-control" id="cover" [ngModel]="newPost.cover" name="cover" required #cover="ngModel" />
+    </div>
+      <div class="form-group my-3">
           <label for="date" class="form-label">Date</label>
           <input type="text" class="form-control text-muted" id="date" [ngModel]="newPost.date" name="date" #date="ngModel" readonly />
       </div>

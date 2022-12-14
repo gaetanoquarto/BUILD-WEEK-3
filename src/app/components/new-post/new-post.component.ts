@@ -16,8 +16,7 @@ export class NewPostComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.currentDate)
-    console.log(this.fullDate)
+
 
   }
 
@@ -29,7 +28,9 @@ export class NewPostComponent implements OnInit {
     body: '',
     category: '',
     date: this.fullDate,
-    subtitle: ''
+    subtitle: '',
+    image: '',
+    cover: ''
   }
 
     create(form: NgForm) {

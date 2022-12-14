@@ -1,0 +1,112 @@
+h2 {
+    color:#545863;
+}
+.card {
+    border: none;
+    border-radius: none;
+}
+
+.newGame {
+    background-color: #2e2e2e;
+    min-height: 400px;
+    border: 3px solid white;
+    outline: 3px solid #2e2e2e;
+    color: white;
+}
+
+#cardSu1 {
+    background-image: url('https://sm.ign.com/t/ign_it/screenshot/default/the-binding-of-isaac-afterbirth_8mwq.1280.jpg');
+    background-size: cover;
+    max-width: 250px;
+    min-height: 100px;
+    max-height: 100px;
+    border: 1px solid black;
+    padding-top: 78px;
+}
+
+#cardSu2 {
+    background-image: url('https://media-assets.wired.it/photos/622711425fb802e91b105e90/3:2/w_1050,h_700,c_limit/god-war-analisis.jpg');
+    background-size: cover;
+    max-width: 250px;
+    min-height: 100px;
+    max-height: 100px;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding-top: 78px;
+}
+
+#cardSu3 {
+    background-image: url('https://sm.ign.com/ign_it/screenshot/default/the-last-of-us-naughty-dog-playstation-4_xb6r.jpg');
+    background-size: cover;
+    max-width: 250px;
+    min-height: 100px;
+    max-height: 100px;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding-top: 78px;
+}
+
+#cardSu3:hover, #cardSu2:hover, #cardSu1:hover {
+    filter: grayscale(100%);
+}
+
+.date {
+    background-color: #F96E46;
+    text-decoration: none;
+    color: white;
+    padding: 0 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+.titloCard {
+    background-color: #2e2e2e;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 200px;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+#last {
+    background-image: url('https://cdn.vox-cdn.com/thumbor/MTmXRkCIIDL2iZjFh0dlmkf8qx8=/0x0:5160x3836/1200x675/filters:focal(3432x2102:4256x2926)/cdn.vox-cdn.com/uploads/chorus_image/image/71148077/Cover_2.0.png'); //ci va l'immagine importata dell'articolo
+    background-size: cover;
+    background-color: darkcyan;
+    min-height: 300px;
+    max-height: 300px;
+    filter: grayscale(90%);
+}
+
+#last:hover {
+    filter: grayscale(0%);
+    transition: all 1s ease-out;
+}
+
+.articleDato {
+    text-align: center;
+    color: white;
+}
+
+.infoArticle {
+    font-size: 12px;
+}
+
+.articleTitle {
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.articleTitleSub {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+img:hover {
+    filter: grayscale(90%);
+}

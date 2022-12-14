@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Post } from 'src/app/models/post.interface';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-pc',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PcComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pstSrv: PostsService) { }
+
+  page = 1;
+  sub: Subscription | undefined
+  posts: Post[] | undefined
 
   ngOnInit(): void {
+    this.sub = this.pstSrv.getCategoryPosts('pc').subscribe((post) => {
+      this.posts = post;
+    })
   }
 
 }

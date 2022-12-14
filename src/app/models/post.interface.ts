@@ -5,5 +5,7 @@ export interface Post {
     body: string,
     category: string,
     date: string,
-    subtitle: string
+    subtitle: string,
+    image: string,
+    cover: string
 }

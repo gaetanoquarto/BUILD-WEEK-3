@@ -32,7 +32,8 @@ export class LoginComponent implements OnInit {
             id: user.id,
             name: user.name,
             email: user.email,
-            password: user.password
+            password: user.password,
+            image: user.image
           }
           localStorage.setItem('user', JSON.stringify(newUser));
 

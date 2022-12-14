@@ -23,40 +23,5 @@
     </div>
 
     <!-- Sezione Commenti -->
-    <div class="pb-5" id="comments">
-        <h3>2 Comments</h3>
-
-        <form>
-            <div class="form-group my-3">
-                <label for="comment" class="form-label">Comment</label>
-                <textarea type="text" class="form-control" id="comment" rows="5" required ngModel></textarea>
-            </div>
-
-            <button type="submit" class="btn text-light mb-3">Submit</button>
-        </form>
-
-        <div>
-            <div class="py-3 d-flex">
-                <div class="me-3">
-                    <img class="rounded-circle" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="50" height="50" alt="Profile pic">
-                </div>
-                <div>
-                    <h4>Nome profilo</h4>
-                    <p class="text-muted">13/12/2022</p>
-                    <p>Questo è il mio commento... Bisognerà poi collegare l'array qui e fare l'ngFor per ciascun commento collegato a questo post.</p>
-                </div>
-            </div>
-
-            <div class="py-3 d-flex">
-                <div class="me-3">
-                    <img class="rounded-circle" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="50" height="50" alt="Profile pic">
-                </div>
-                <div>
-                    <h4>Nome profilo</h4>
-                    <p class="text-muted">13/12/2022</p>
-                    <p>Questo è il mio commento... Bisognerà poi collegare l'array qui e fare l'ngFor per ciascun commento collegato a questo post.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-comments></app-comments>
 </div>
