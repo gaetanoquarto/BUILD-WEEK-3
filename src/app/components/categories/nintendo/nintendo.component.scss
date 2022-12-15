@@ -1,18 +1,8 @@
-#first-div {
-    background-image: url('https://images.pexels.com/photos/7241440/pexels-photo-7241440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    height: 60vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: transform 0.3s ease-in-out;
-    &:hover {
-        transform:  scale(1.01);
-    }
-}
-
-.card img {
-    transition: transform 0.3s ease-in-out;
-    &:hover {
-        transform: translateX(5px);
-    }
+#container-img {
+  background-image: url('https://images.pexels.com/photos/1462725/pexels-photo-1462725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
 }

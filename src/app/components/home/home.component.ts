@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { NavigationEnd, Router } from '@angular/router';
-import { map, tap } from 'rxjs';
+import { Subscription } from 'rxjs';
+import { PostsService } from 'src/app/services/posts.service';
+import { Post } from 'src/app/models/post.interface';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +10,21 @@ import { map, tap } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  sub!: Subscription;
+  lastPost: Post[] | undefined;
+  notLastPosts: Post[] | undefined
+
+  constructor(private pstSrv: PostsService) { }
 
   ngOnInit(): void {
+      this.getLastPosts();
+  }
 
+  getLastPosts() {
+      this.sub = this.pstSrv.getPosts().subscribe((post) => {
+          this.lastPost = post.slice(-1).reverse();
+          this.notLastPosts = post.slice(-5, -1).reverse();
+      })
   }
 
 }

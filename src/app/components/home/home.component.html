@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container-fluid" id="lastArticles">
     <div class="d-flex justify-content-center align-items-center mt-5">
         <h1 class="me-3">Ultimi Articoli</h1>
@@ -6,67 +7,30 @@
     <!-- riga uno grande  -->
     <div class="row">
 
-        <div class="col-md-6 g-0" >
-            <a href="">
+        <div class="col-lg-6 g-0" *ngFor="let post of lastPost">
+            <a [routerLink]="['/posts/', post.id]">
                 <div class="d-flex justify-content-center" id="last">
                     <div class="articleDato align-self-center">
-                        <p class="infoArticle"><span> Autore </span> <span>Data</span></p>
-                        <p class="articleTitleSub"> Titolo 2</p>
+                        <p class="infoArticle"><span> {{post.author}} </span> <span>{{post.date}}</span></p>
+                        <p class="articleTitleSub"> {{post.title}}</p>
                     </div>
                 </div>
             </a>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6">
 
             <div class="row">
                 <!-- riga due piccola  -->
-                <div class="col-md-6 g-0">
-                    <a href="">
+                <div class="col-md-6 g-0" *ngFor="let post of notLastPosts">
+                    <a [routerLink]="['/posts/', post.id]">
                         <div class="d-flex justify-content-center" id="second">
                             <div class="articleDato align-self-center">
-                                <p class="infoArticle"><span> Autore </span> <span>Data</span></p>
-                                <p class="articleTitleSub"> Titolo 2</p>
+                                <p class="infoArticle"><span> {{post.author}} </span> <span>{{post.date}}</span></p>
+                                <p class="articleTitleSub"> {{post.title}}</p>
                             </div>
                         </div>
                     </a>
-                </div>
-                <div class="col-md-6 g-0">
-                    <a href="">
-                        <div class="d-flex justify-content-center" id="third">
-                            <div class="articleDato align-self-center">
-                                <p class="infoArticle"><span> Autore </span> <span>Data</span></p>
-                                <p class="articleTitleSub"> Titolo 2</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- riga due piccola  -->
-                <div class="col-md-6 g-0">
-                    <a href="">
-                        <div class="d-flex justify-content-center" id="fourth">
-                            <div class="articleDato align-self-center">
-                                <p class="infoArticle"><span> Autore </span> <span>Data</span></p>
-                                <p class="articleTitleSub"> Titolo 2</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 g-0">
-                    <a href="">
-                        <div class="d-flex justify-content-center" id="fifth">
-                            <div class="articleDato align-self-center">
-                                <p class="infoArticle"><span> Autore </span> <span>Data</span></p>
-                                <p class="articleTitleSub"> Titolo 2</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
         </div>
 
     </div>
@@ -79,3 +43,4 @@
 <app-filtered-playstation></app-filtered-playstation>
 <app-filtered-xbox></app-filtered-xbox>
 <app-filtered-nintendo></app-filtered-nintendo>
+<app-footer></app-footer>

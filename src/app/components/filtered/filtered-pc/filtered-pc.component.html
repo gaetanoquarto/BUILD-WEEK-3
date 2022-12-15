@@ -1,60 +1,70 @@
 <div class="container-fluid">
 
     <div class="row">
-
-        <div class="col-md-3">
+        <!-- SPAZIO VUOTO  -->
+        <div class="col-sm-1">
         </div>
-        <div class="col-md-6">
+        <!-- SPAZIO CENTRALE  -->
+        <div class="col-sm-10">
+            <!-- TITOLO SEZIONE  -->
             <div class="d-flex justify-content-center align-items-center mt-5">
-
                 <div style="width: 1000px; border-bottom: 5px solid #545863;"></div>
-                <h2 class="me-3 text-end" >Computer News</h2>
+                <h3 class="me-3 text-end">PC News</h3>
             </div>
-            <div class="row mt-3">
-                <div class="col-md-4">
+
+            <!-- SEZIONE CARD SMALL -->
+            <div class="row" id="cardSmall">
+                <div class="col-lg-4" *ngFor="let post of posts">
                     <div class="card" >
-                         <a href=""><img src="https://cdn1.epicgames.com/e1055bf1e5654b93a27e19e6bb86cb2a/offer/EGS_Tropico6_LimbicEntertainment_S3-2560x1440-82bcd83b988a5c3230ff8f191113d9b2.jpg" class="card-img-top" alt="..."></a>
+                        <a [routerLink]="['/posts/', post.id]"><img src="{{post.image}}" alt="..." width="100%"></a>
                         <div class="card-body">
-                            <a href=""><h3> Titolo </h3></a>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card" >
-                        <a href=""> <img src="https://s1.gaming-cdn.com/images/products/2244/616x353/age-of-empires-iv-pc-gioco-steam-cover.jpg?v=1650546720" class="card-img-top" alt="..."></a>
-                        <div class="card-body">
-                           <a href=""><h3> Titolo </h3></a>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card" >
-                        <a href=""> <img src="https://images.everyeye.it/img-articoli/civilization-6-recensione-storia-arriva-ps4-xbox-one-v12-46284.jpg" class="card-img-top" alt="..."></a>
-                        <div class="card-body">
-                            <a href=""><h3> Titolo </h3></a>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                            <a href=""><h4> {{post.title}} </h4></a>
+                            <p class="text">{{post.subtitle}}</p>
+                            <p class="text"><small class="text-muted">{{post.author}} {{post.date}}</small></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-md-4">
+
+            <!-- SEZIONE CARD LARGE  -->
+
+            <div class="row" id="cardLarge">
+                <div class="col-sm-12" *ngFor="let post of posts">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-5">
+                                <a [routerLink]="['/posts/', post.id]"> <img src="{{post.image}}" alt="..." width="100%"></a>
+                            </div>
+                            <div class="col-7">
+                                <div class="card-body">
+                                    <a href=""><h4> {{post.title}} </h4></a>
+                                    <p class="text">{{post.subtitle}}</p>
+                                    <p class="text"><small class="text-muted">{{post.author}} {{post.date}}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center">
-                    <button type="button" class="btn btn-success">
-                        Leggi di piÃ¹
-                    </button>
-                </div>
-                <div class="col-md-4">
+            </div>
+
+            <!-- SEZIONE BOTTONE -->
+            <div class="row mt-4">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <button class="btn btn-primary" [routerLink]="['/category/pc']"> Leggi di più</button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+
+        <!-- SPAZIO VUOTO  -->
+        <div class="col-sm-1">
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+

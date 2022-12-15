@@ -46,10 +46,18 @@ ul li a:focus {
    border: 3px solid white;
  }
 
+//  #userLog {
+//    background-color: rgb(223, 13, 13);
+//  }
+
 
 @media screen and (max-width: 991px) {
     #logo {
         display: none;
+    };
+
+    #logo2 {
+        display: block;
     };
 
     ul {
@@ -75,7 +83,7 @@ ul li a:focus {
      }
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 992px) {
     #logo2 {
         display: none;
     };
