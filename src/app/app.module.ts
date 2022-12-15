@@ -8,7 +8,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { PostsComponent } from './components/posts/posts.component';
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,7 +29,6 @@ import { ProfileComponent } from './components/profile/profile.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    PostsComponent,
     PostEditComponent,
     PostDetailsComponent,
     NewPostComponent,

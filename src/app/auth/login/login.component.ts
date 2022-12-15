@@ -12,14 +12,14 @@ import { tap } from 'rxjs/operators';
 })
 export class LoginComponent implements OnInit {
 
+  errorMessage: string | undefined;
+
   constructor(private authSrv: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-
-
-  accedi(form: NgForm) {
+  login(form: NgForm) {
     this.authSrv.login(form.value).subscribe((ris) => {
       let users: any = ris;
       console.log(users);
@@ -36,13 +36,12 @@ export class LoginComponent implements OnInit {
             image: user.image
           }
           localStorage.setItem('user', JSON.stringify(newUser));
-
           this.router.navigate(['']);
+        } else if (user.email !== email && user.password !== password) {
+            this.errorMessage = 'I dati sono incorretti o l\'utente non esiste.'
         }
       });
     })
   }
 
 }
-
-

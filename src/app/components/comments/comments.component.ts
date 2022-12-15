@@ -60,7 +60,7 @@ export class CommentsComponent implements OnInit {
     //postiamo sul json
     this.sub = this.pstSrv.postComment(this.newComment.postId!, this.newComment).subscribe((ris) => {
       console.log(ris);
-      location.reload();
+      this.comments?.push(ris)
     })
   }
 

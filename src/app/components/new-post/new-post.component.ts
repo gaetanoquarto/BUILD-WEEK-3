@@ -17,8 +17,6 @@ export class NewPostComponent implements OnInit {
 userData: any = []
 
   ngOnInit(): void {
-   let userLogged: any = localStorage.getItem('user');
-    this.userData = JSON.parse(userLogged);
 
   }
 
@@ -27,10 +25,10 @@ userData: any = []
 
 
 
-  newPost = {
+  newPost:Partial <Post> = {
     title: '',
-    author: this.userData.name,
-    authorImage: this.userData.image,
+    author: '',
+    authorImage: '',
     body: '',
     category: '',
     date: this.fullDate,
@@ -40,9 +38,21 @@ userData: any = []
   }
 
     create(form: NgForm) {
-      console.log(form.value)
-      this.pstSrv.createPost(form.value).subscribe((res: any) => {
-        this.router.navigate(['/posts']);
+      let userLogged: any = localStorage.getItem('user');
+    this.userData = JSON.parse(userLogged);
+    console.log(this.userData)
+
+      this.newPost.title = form.value.title
+      this.newPost.author = this.userData.name
+      this.newPost.authorImage = this.userData.image
+      this.newPost.body = form.value.body
+      this.newPost.category = form.value.category
+      this.newPost.subtitle = form.value.subtitle
+      this.newPost.image = form.value.image
+      this.newPost.cover = form.value.cover
+      this.pstSrv.createPost(this.newPost).subscribe((res: any) => {
+        console.log(res);
+        this.router.navigate(['/']);
       })
     }
 }

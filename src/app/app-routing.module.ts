@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
-import { PostsComponent } from './components/posts/posts.component';
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
@@ -21,10 +20,6 @@ const routes: Routes = [
   {
     path: "",
     component: HomeComponent
-  },
-  {
-    path: "posts",
-    component: PostsComponent
   },
   {
     path: "profile",

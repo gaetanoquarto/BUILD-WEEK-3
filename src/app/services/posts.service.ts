@@ -23,12 +23,12 @@ export class PostsService {
     return this.http.put<Post>(`https://6396f0fd77359127a027315e.mockapi.io/posts/${post.id}`, post);
   }
 
-  createPost(post: Post) {
+  createPost(post:Partial <Post>) {
     return this.http.post(`https://6396f0fd77359127a027315e.mockapi.io/posts/`, post);
   }
 
   postComment(id: number, comment: Partial <Comment>) {
-    return this.http.post(`https://6396f0fd77359127a027315e.mockapi.io/posts/${id}/comments`, comment)
+    return this.http.post<Comment>(`https://6396f0fd77359127a027315e.mockapi.io/posts/${id}/comments`, comment)
   }
 
   getComments(id: number): Observable<Comment[]> {
