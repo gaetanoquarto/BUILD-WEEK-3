@@ -3,9 +3,9 @@
         <div class="col-md-1">
         </div>
         <div class="col-md-10">
-            <div class="d-flex justify-content-center align-items-center mt-3">
-                <h3 class="me-3">Playstation News</h3>
-                <div style="width: 1000px; border-bottom: 5px solid #545863;"></div>
+            <div class="d-flex justify-content-center align-items-center my-2">
+                <h3 class="">Latest Playstation</h3>
+                <div style="width: 980px; border-bottom: 5px solid #545863;"></div>
             </div>
             <div class="row">
 
@@ -46,7 +46,7 @@
                         <div class="col-md-12" *ngFor="let post of lastPost">
 
                             <a [routerLink]="['/posts/', post.id]">
-                                <div class="d-flex justify-content-center" id="lastPS">
+                                <div class="d-flex justify-content-center" id="lastPS" style="background: url('{{post.image}}') center / cover no-repeat;">
                                     <div class="articleDato align-self-center">
                                         <p class="infoArticle"><span> {{post.author}} </span> <span>{{post.date}}</span></p>
                                         <p class="articleTitleSub"> {{post.subtitle}}</p>

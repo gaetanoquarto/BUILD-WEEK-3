@@ -1,8 +1,14 @@
 <app-navbar></app-navbar>
 <!-- Sezione immagine con titolo -->
-<div class="d-flex flex-column justify-content-center align-items-center" id="details-img">
-    <h1 class="text-light my-3">{{ p?.title | uppercase }}</h1>
-    <h2 class="text-light my-3 text-center">{{ p?.subtitle }}</h2>
+<div class="">
+<div class="card text-bg-dark">
+  <div class="details-img bg-img" style="background: url('{{p?.image}}') center / cover no-repeat fixed;">
+</div>
+  <div class="card-img-overlay">
+    <h5 class="card-title">{{p?.title}}</h5>
+    <p class="card-text">{{p?.subtitle}}</p>
+  </div>
+</div>
 </div>
 
 <div class="container" id="body-details">

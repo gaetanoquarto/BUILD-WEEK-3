@@ -42,12 +42,7 @@ input:active, input:focus, textarea:active, textarea:focus, select:active, selec
     }
 }
 
-.card img {
-    transition: transform 0.3s ease-in-out;
-    &:hover {
-        transform: translateX(5px);
-    }
-}
+
 
 .container100 {
   height: 100vh;

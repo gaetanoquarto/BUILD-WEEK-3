@@ -6,3 +6,10 @@
   background-attachment: fixed;
   height: 100vh;
 }
+
+.card img {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+      transform: translateX(5px);
+  }
+}

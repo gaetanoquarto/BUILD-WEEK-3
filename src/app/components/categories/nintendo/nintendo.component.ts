@@ -12,6 +12,7 @@ export class NintendoComponent implements OnInit {
 
     constructor(private pstSrv: PostsService) { }
 
+    logged = false;
     page = 1;
     sub: Subscription | undefined
     posts: Post[] | undefined
@@ -20,6 +21,12 @@ export class NintendoComponent implements OnInit {
         this.sub = this.pstSrv.getCategoryPosts('nintendo').subscribe((post) => {
             this.posts = post;
         })
+      const value = localStorage.getItem('user');
+      if(value) {
+        this.logged = true;
+      } else {
+        this.logged = false;
+      }
     }
 
 }

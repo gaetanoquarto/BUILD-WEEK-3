@@ -15,11 +15,19 @@ export class PlaystationComponent implements OnInit {
   page = 1;
   sub: Subscription | undefined
   posts: Post[] | undefined
+  logged = false;
+
 
   ngOnInit(): void {
     this.sub = this.pstSrv.getCategoryPosts('playstation').subscribe((post) => {
       this.posts = post;
     })
+    const value = localStorage.getItem('user');
+    if(value) {
+      this.logged = true;
+    } else {
+      this.logged = false;
+    }
   }
 
 }

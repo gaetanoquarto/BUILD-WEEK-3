@@ -10,8 +10,7 @@ import { Post } from 'src/app/models/post.interface';
 export class FilteredNintendoComponent implements OnInit {
 
   sub!: Subscription;
-  lastPost: Post[] | undefined;
-  notLastPosts: Post[] | undefined
+  posts: Post[] | undefined;
 
   constructor(private pstSrv: PostsService) { }
 
@@ -21,8 +20,7 @@ export class FilteredNintendoComponent implements OnInit {
 
   getLastThreeNintendo() {
       this.sub = this.pstSrv.getCategoryPosts('nintendo').subscribe((post) => {
-          this.lastPost = post.slice(-1).reverse();
-          this.notLastPosts = post.slice(-3, -1).reverse();
+          this.posts = post.slice(-3).reverse();
       })
   }
 
