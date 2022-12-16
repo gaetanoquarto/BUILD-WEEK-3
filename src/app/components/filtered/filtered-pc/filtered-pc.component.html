@@ -28,23 +28,23 @@
 
           <!-- SEZIONE CARD LARGE -->
           <div class="row" id="cardLarge">
-              <div class="col-sm-12" *ngFor="let post of posts">
-                  <div class="card border-0 mb-3">
-                      <div class="row g-0">
-                          <div class="col-5">
-                              <a [routerLink]="['/posts/', post.id]"><img src="{{post.image}}" alt="Immagine" [width]="'100%'" [height]="'100%'"></a>
-                          </div>
-                          <div class="col-7">
-                              <div class="card-body">
-                                  <a [routerLink]="['/posts/', post.id]"><h4>{{post.title}}</h4></a>
-                                  <p>{{post.subtitle}}</p>
-                                  <p><small class="text-muted">{{post.author}} {{post.date}}</small></p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+            <div class="col-sm-12" *ngFor="let post of posts">
+                <div class="card border-0 mb-3">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <a [routerLink]="['/posts/', post.id]"><img src="{{post.image}}" alt="Immagine" width="100%"></a>
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body">
+                                <a [routerLink]="['/posts/', post.id]"><h4>{{post.title}}</h4></a>
+                                <p>{{post.subtitle}}</p>
+                                <p><small class="text-muted">{{post.author}} {{post.date}}</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
           <!-- SEZIONE BOTTONE -->
           <div class="row mt-4">

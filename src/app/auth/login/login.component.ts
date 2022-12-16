@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
   login(form: NgForm) {
     this.authSrv.login(form.value).subscribe((ris) => {
       let users: any = ris;
-      console.log(users);
       users.map((user: User) => {
         const email = form.value.email;
         const password = form.value.password;
