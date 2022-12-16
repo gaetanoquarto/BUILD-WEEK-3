@@ -6,6 +6,14 @@ a {
     color: #F96E46;
   }
 }
+#banner {
+  background: url('https://i.imgur.com/PFCbrNd.png');
+  filter: brightness(0.8);
+  background-position: center;
+  background-size: cover;
+  // background-color: #F96E46;
+  max-height: 100vh;
+}
 
 #lastPS {
   min-height: 300px;
@@ -28,6 +36,10 @@ img {
 
 @media screen and (max-width: 991px) {
   #cardSmall {
+    display: none;
+  }
+
+  #banner {
     display: none;
   }
 }

@@ -51,7 +51,6 @@ userData: any = []
       this.newPost.image = form.value.image
       this.newPost.cover = form.value.cover
       this.pstSrv.createPost(this.newPost).subscribe((res: any) => {
-        console.log(res);
         this.router.navigate(['/']);
       })
     }

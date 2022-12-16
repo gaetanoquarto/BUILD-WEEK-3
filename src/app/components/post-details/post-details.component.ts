@@ -25,7 +25,6 @@ export class PostDetailsComponent implements OnInit {
     this.pstSrv.getPosts().subscribe((posts: Post[]) => {
       this.p = posts.find((element) => {
         if(x == element.id) {
-          console.log(element);
           return true;
         } else {
           return false;
@@ -33,8 +32,6 @@ export class PostDetailsComponent implements OnInit {
       })
       let userLogged: any = localStorage.getItem('user');
     this.userData = JSON.parse(userLogged);
-    console.log(this.userData)
-    console.log(this.p)
     if (this.userData.name === this.p?.author) {
       this.owner = true;
     }
@@ -49,6 +46,5 @@ export class PostDetailsComponent implements OnInit {
     })
   }
 
-  //DA FARE: CONTROLLO SE L'AUTORE DELL'ARTICOLO è L'UTENTE LOGGATO E QUINDI VISUALIZZI IL PULSANTI DI DELETE E MODIFICA POST.
 
 }

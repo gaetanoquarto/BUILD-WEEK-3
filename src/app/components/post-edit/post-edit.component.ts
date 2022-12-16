@@ -15,19 +15,23 @@ export class PostEditComponent implements OnInit {
   constructor(private ar: ActivatedRoute, private pstSrv: PostsService, private router: Router) { }
 
   p: Post | undefined
-
+userData: any = []
 
   ngOnInit(): void {
     let x = this.ar.snapshot.params["id"];
     this.pstSrv.getPosts().subscribe((posts: Post[]) => {
       this.p = posts.find((element) => {
         if(x == element.id) {
-          console.log(element);
           return true;
         } else {
           return false;
         }
       })
+      let userLogged: any = localStorage.getItem('user');
+      this.userData = JSON.parse(userLogged);
+      if (this.userData.name !== this.p?.author) {
+        this.router.navigate(['/posts/', x]);
+      }
     })
   }
 
@@ -47,7 +51,6 @@ export class PostEditComponent implements OnInit {
       }
       console.log(post)
       this.pstSrv.updatePost(post).subscribe((data) => {
-        console.log(data);
         this.router.navigate(['/posts/', post.id]);
 
       })

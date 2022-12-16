@@ -7,6 +7,15 @@ a {
   }
 }
 
+#banner {
+  background: url('https://i.imgur.com/p3oD6sY.png');
+  filter: brightness(0.8);
+  background-position: center;
+  background-size: cover;
+  // background-color: #F96E46;
+  max-height: 100vh;
+}
+
 #lastPS {
   min-height: 300px;
   max-height: 300px;
@@ -30,12 +39,18 @@ img {
   #cardSmall {
     display: none;
   }
+  #banner {
+    display: none;
+  }
+
 }
 
 @media screen and (min-width: 991px) {
   #cardLarge {
     display: none;
   }
+
+
 }
 
 // Sezione Prossime Uscite

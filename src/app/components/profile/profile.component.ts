@@ -43,8 +43,7 @@ export class ProfileComponent implements OnInit {
       console.log(user.id)
       this.service.updateUser(user).subscribe((data: any) => {
         localStorage.setItem('user', JSON.stringify(user));
-        console.log(data);
-        location.reload();
+        this.getUser();
       })
     }
 

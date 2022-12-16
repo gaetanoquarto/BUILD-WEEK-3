@@ -15,7 +15,6 @@ export class RegisterComponent implements OnInit {
   }
 
   async onsubmit(form: NgForm) {
-    console.log(form.value)
     try {
       await this.authSrv.registration(form.value).subscribe()
       this.router.navigate(['/login'])
