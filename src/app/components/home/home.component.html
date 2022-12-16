@@ -11,7 +11,7 @@
     <div class="col-lg-6 g-0" *ngFor="let post of lastPost">
       <a [routerLink]="['/posts/', post.id]">
         <div class="d-flex justify-content-center align-items-center text-light" id="last"
-          style="background: url('{{ post.image }}') center / cover no-repeat;">
+          style="background: url('{{ post.cover }}') center / cover no-repeat;">
           <div>
             <p>{{ post.author }} {{ post.date }}</p>
             <p class="h3">{{ post.title }}</p>
