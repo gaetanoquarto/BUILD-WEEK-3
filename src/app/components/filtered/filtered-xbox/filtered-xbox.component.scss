@@ -1,110 +1,67 @@
-.card {
-  border: none;
-  border-radius: none;
-}
-
-
 a {
   text-decoration: none;
   color: #2e2e2e;
-}
 
-a:hover {
-  color: #F96E46;
+  &:hover {
+    color: #F96E46;
+  }
 }
-
-.articleDato {
-  text-align: center;
-  color: white;
-}
-
-.infoArticle {
-  font-size: 12px;
-}
-
-.articleTitle {
-  color: white;
-  font-size: 30px;
-  text-transform: uppercase;
-}
-
-.articleTitleSub {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
 
 #lastPS {
-  background-image: url('https://cdn.vox-cdn.com/thumbor/MTmXRkCIIDL2iZjFh0dlmkf8qx8=/0x0:5160x3836/1200x675/filters:focal(3432x2102:4256x2926)/cdn.vox-cdn.com/uploads/chorus_image/image/71148077/Cover_2.0.png'); //ci va l'immagine importata dell'articolo
-  background-size: cover;
-  background-color: darkcyan;
   min-height: 300px;
   max-height: 300px;
   filter: grayscale(90%);
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
 }
 
-#last:hover {
-  filter: grayscale(0%);
-  transition: all 1s ease-out;
-}
+img {
+  transition: all 0.5s ease-out;
 
-img:hover {
-  filter: grayscale(90%);
+  &:hover {
+    filter: grayscale(90%);
+  }
 }
-
 
 @media screen and (max-width: 991px) {
   #cardSmall {
-      display: none;
+    display: none;
   }
-
 }
 
 @media screen and (min-width: 991px) {
   #cardLarge {
-      display: none;
+    display: none;
   }
 }
 
-
-
-// NUOVO CSS
-
+// Sezione Prossime Uscite
 #newGamePS {
   background-color: #2e2e2e;
   border: 3px solid white;
   outline: 3px solid #2e2e2e;
   color: white;
-
-}
-
-h5 {
-  font-size: 15px;
-}
-
-.card:hover {
-  filter: grayscale(90%);
 }
 
 @media screen and (max-width: 991px) {
-  #gamePS1, #gamePS2, #gamePS3 {
-      max-height: 100px;
-      max-width: 200px;
+  #gamePS1,
+  #gamePS2,
+  #gamePS3 {
+    max-height: 100px;
+    max-width: 200px;
   }
+
   h5 {
-      font-size: 12px;
+    font-size: 12px;
   }
+
   #psArticle {
-      padding: 0;
-      margin-top: -6px;
+    padding: 0;
+    margin-top: -6px;
   }
-
-}
-
-@media screen and (min-width: 991px) {
-
-
 }
 
 #gamePS1 {
@@ -134,7 +91,7 @@ h5 {
 .cardBG {
   background-color: #2e2e2e;
   text-align: center;
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 .cardBG2 {

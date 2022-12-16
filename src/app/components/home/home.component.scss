@@ -1,76 +1,23 @@
-.articleDato {
-    text-align: center;
-    color: white;
-}
-
-.infoArticle {
-    font-size: 12px;
-}
-
-.articleTitle {
-    color: white;
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-.articleTitleSub {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #last {
-    background-size: cover;
-    background-color: darkcyan;
-    min-height: 500px;
-    max-height: 500px;
-    filter: grayscale(90%);
+  min-height: 500px;
+  max-height: 500px;
+  transition: all 0.5s ease-out;
 }
 
 #last:hover {
-    filter: grayscale(0%);
-    transition: all 1s ease-out;
+  filter: grayscale(90%);
 }
 
-
-#second:hover, #third:hover, #fourth:hover, #fifth:hover {
-    filter: grayscale(0%);
-    transition: all 1s ease-out;
+#fourPosts {
+  min-height: 250px;
+  max-height: 250px;
+  transition: all 0.5s ease-out;
 }
 
-#second, #third, #fourth, #fifth {
-    min-height: 250px;
-    max-height: 250px;
-    filter: grayscale(90%);
-}
-
-#second {
-    background-image: url('https://i.ytimg.com/vi/OkD4vGGCC_Y/maxresdefault.jpg'); //ci va l'immagine importata dell'articolo
-    background-size: cover;
-    background-color: darkblue;
-}
-
-#third {
-    background-image: url('https://www.nerdpool.it/wp-content/uploads/2021/10/death-stranding-directors-cut-cover.jpg'); //ci va l'immagine importata dell'articolo
-    background-size: cover;
-    background-color: darkgoldenrod;
-
-}
-
-#fourth {
-    background-image: url('https://image.api.playstation.com/vulcan/img/rnd/202011/1215/WyHa1BM3ISDVqYSEUMB9VZJs.png'); //ci va l'immagine importata dell'articolo
-    background-size: cover;
-    background-color: darkgreen;
-
-}
-
-#fifth {
-    background-image: url('https://www.techzilla.it/wp-content/uploads/2022/08/spiderman-remastered-1.jpg'); //ci va l'immagine importata dell'articolo
-    background-size: cover;
-    background-color: darkolivegreen;
-
+#fourPosts:hover {
+  filter: grayscale(90%);
 }

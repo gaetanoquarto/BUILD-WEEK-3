@@ -1,46 +1,46 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" id="lastArticles">
-    <div class="d-flex justify-content-center align-items-center mt-5">
-        <h1 class="me-3">Ultimi Articoli</h1>
-        <div style="width: 1000px; border-bottom: 5px solid #545863;"></div>
-    </div>
-    <!-- riga uno grande  -->
-    <div class="row">
 
-        <div class="col-lg-6 g-0" *ngFor="let post of lastPost">
-            <a [routerLink]="['/posts/', post.id]">
-                <div class="d-flex justify-content-center" id="last" style="background: url('{{post.image}}') center / cover no-repeat;">
-                    <div class="articleDato align-self-center">
-                        <p class="infoArticle"><span> {{post.author}} </span> <span>{{post.date}}</span></p>
-                        <p class="articleTitleSub"> {{post.title}}</p>
-                    </div>
-                </div>
-            </a>
+<div class="container-fluid my-5" id="lastArticles">
+  <div class="d-flex justify-content-center align-items-center my-3">
+    <h1 class="me-3">Ultimi Articoli</h1>
+    <div style="width: 900px; border-bottom: 5px solid #545863"></div>
+  </div>
+
+  <div class="row text-center my-3">
+    <!-- Sezione Ultimi articoli -->
+    <div class="col-lg-6 g-0" *ngFor="let post of lastPost">
+      <a [routerLink]="['/posts/', post.id]">
+        <div class="d-flex justify-content-center align-items-center text-light" id="last"
+          style="background: url('{{ post.image }}') center / cover no-repeat;">
+          <div>
+            <p>{{ post.author }} {{ post.date }}</p>
+            <p class="h3">{{ post.title }}</p>
+          </div>
         </div>
-
-        <div class="col-lg-6">
-
-            <div class="row">
-                <!-- riga due piccola  -->
-                <div class="col-md-6 g-0" *ngFor="let post of notLastPosts">
-                    <a [routerLink]="['/posts/', post.id]">
-                        <div class="d-flex justify-content-center" id="second" style="background: url('{{post.image}}') center / cover no-repeat;">
-                            <div class="articleDato align-self-center">
-                                <p class="infoArticle"><span> {{post.author}} </span> <span>{{post.date}}</span></p>
-                                <p class="articleTitleSub"> {{post.title}}</p>
-                            </div>
-                        </div>
-                    </a>
-        </div>
-
+      </a>
     </div>
+
+    <!-- Sezione 4 Ultimi Articoli -->
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-md-6 g-0" *ngFor="let post of notLastPosts">
+          <a [routerLink]="['/posts/', post.id]">
+            <div class="d-flex justify-content-center align-items-center text-light" id="fourPosts" style="background: url('{{post.image}}') center / cover no-repeat;">
+              <div>
+                <p>{{ post.author }} {{ post.date }}</p>
+                <p class="h3">{{ post.title }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-filtered-pc></app-filtered-pc>
+  <app-filtered-playstation></app-filtered-playstation>
+  <app-filtered-nintendo></app-filtered-nintendo>
+  <app-filtered-xbox></app-filtered-xbox>
 </div>
 
-
-
-
-<app-filtered-pc></app-filtered-pc>
-<app-filtered-playstation></app-filtered-playstation>
-<app-filtered-nintendo></app-filtered-nintendo>
-<app-filtered-xbox></app-filtered-xbox>
 <app-footer></app-footer>

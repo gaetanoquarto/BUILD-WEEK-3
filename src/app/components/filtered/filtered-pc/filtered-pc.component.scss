@@ -1,35 +1,28 @@
-
 a {
-    text-decoration: none;
-    color: #2e2e2e;
+  text-decoration: none;
+  color: #2e2e2e;
 }
 
 a:hover {
-    text-decoration: none;
-    color: #F96E46;
+  color: #F96E46;
 }
 
-img:hover {
+img {
+  transition: all 0.5s ease-out;
+
+  &:hover {
     filter: grayscale(90%);
-}
-
-.text {
-    font-size: 14px;
-}
-
-.card {
-    border: none;
+  }
 }
 
 @media screen and (max-width: 991px) {
-    #cardSmall {
-        display: none;
-    }
-
+  #cardSmall {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 991px) {
-    #cardLarge {
-        display: none;
-    }
+  #cardLarge {
+    display: none;
+  }
 }

@@ -46,8 +46,8 @@ export class PostDetailsComponent implements OnInit {
   }
 
   //DA FARE: CONTROLLO SE L'AUTORE DELL'ARTICOLO è L'UTENTE LOGGATO E QUINDI VISUALIZZI IL PULSANTI DI DELETE E MODIFICA POST.
-  // checkPostUser() {
-  //   if
-  // }
+  checkPostUser() {
+    console.log(this.p)
+  }
 
 }

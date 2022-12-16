@@ -1,31 +1,24 @@
-
 a {
   text-decoration: none;
   color: #2e2e2e;
 }
 
 a:hover {
-  text-decoration: none;
   color: #F96E46;
 }
 
-img:hover {
-  filter: grayscale(90%);
-}
+img {
+  transition: all 0.5s ease-out;
 
-.text {
-  font-size: 14px;
-}
-
-.card {
-  border: none;
+  &:hover {
+    filter: grayscale(90%);
+  }
 }
 
 @media screen and (max-width: 991px) {
   #cardSmall {
       display: none;
   }
-
 }
 
 @media screen and (min-width: 991px) {
