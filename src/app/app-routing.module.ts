@@ -6,15 +6,12 @@ import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import { NewPostComponent } from './components/new-post/new-post.component';
-import { PlaystationComponent } from './components/categories/playstation/playstation.component';
-import { PcComponent } from './components/categories/pc/pc.component';
-import { XboxComponent } from './components/categories/xbox/xbox.component';
-import { NintendoComponent } from './components/categories/nintendo/nintendo.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthModule } from './auth/auth.module';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CategoriesComponent } from './components/categories/categories/categories.component';
 
 const routes: Routes = [
   {
@@ -49,19 +46,19 @@ const routes: Routes = [
   },
   {
     path: 'category/pc',
-    component: PcComponent
+    component: CategoriesComponent
   },
   {
     path: 'category/xbox',
-    component: XboxComponent
+    component: CategoriesComponent
   },
   {
     path: 'category/playstation',
-    component: PlaystationComponent
+    component: CategoriesComponent
   },
   {
     path: 'category/nintendo',
-    component: NintendoComponent
+    component: CategoriesComponent
   },
 
 ]
